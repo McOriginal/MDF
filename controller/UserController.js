@@ -214,7 +214,7 @@ exports.sendVerifyCodePassword = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: `"Quicaillerie Général Groupe Siby" <${process.env.EMAIL_USER}>`,
+      from: `"Moussa Djibo & Frère" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: 'Code de réinitialisation',
       text: `Votre code de réinitialisation est : ${code}. ce code expire dans deux minutes.`,
