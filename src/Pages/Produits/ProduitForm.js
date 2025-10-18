@@ -152,7 +152,7 @@ const ProduitForm = ({ produitToEdit, tog_form_modal }) => {
               id='stock'
               onChange={validation.handleChange}
               onBlur={validation.handleBlur}
-              value={validation.values.stock || ''}
+              value={validation.values.stock || undefined}
               invalid={
                 validation.touched.stock && validation.errors.stock
                   ? true
@@ -243,7 +243,7 @@ const ProduitForm = ({ produitToEdit, tog_form_modal }) => {
             />
             <a
               href={`https://www.google.com/search?sca_esv=36ac96dba69ebed1&sxsrf=AE3TifPFX9Ag6g7OHGRvbMuvmwEvx86_AA:1748385419157&q=${
-                validation.values.name || 'produit quincaillerie'
+                validation.values.name || 'moto de pièces détachées'
               }&udm=2&fbs=AIIjpHx4nJjfGojPVHhEACUHPiMQ_pbg5bWizQs3A_kIenjtcpTTqBUdyVgzq0c3_k8z34GAwf0jHaPgz38H1UrFi4JZ_wsbaZy5bcislJwEjK9aKAAgw7EDHBpnhJERxbAHVFJEPpsPJRN2Lf5NIxh4Y6E23jLfuJM1k2vNHWwZgjeinct1k1SwMNRPIUfhAwFDaWeIbf0gNPayotFQo8sw3bnjAaBRZQ&sa=X&ved=2ahUKEwj6otue28SNAxWJKvsDHURDCkcQtKgLegQIFRAB&biw=1280&bih=585&dpr=1.5`}
               target='blank'
               style={{
