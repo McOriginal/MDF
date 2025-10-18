@@ -6,16 +6,12 @@ import {
   companyServices1,
   companyServices2,
   companyTel,
-  outil_10,
-  outil_11,
-  outil_12,
-  outil_13,
+  outil_1,
+  outil_2,
+  outil_3,
   outil_4,
   outil_5,
   outil_6,
-  outil_7,
-  outil_8,
-  outil_9,
 } from '../../CompanyInfo/CompanyInfo';
 export default function FactureHeader() {
   return (
@@ -29,29 +25,29 @@ export default function FactureHeader() {
         style={{
           position: 'absolute',
           top: '40px',
-          left: '-5px',
+          left: '30px',
         }}
         className='d-flex flex-column gap-3 justify-content-center align-item-center'
       >
         <CardImg
           src={companyLogo}
           style={{
-            width: '160px',
+            width: '100px',
           }}
         />
       </div>
-      <h3 className='text-center text-bold font-size-22 text-info '>
+      <h3 className='text-center fw-bold font-size-22 text-info '>
         {' '}
-        {companyName}{' '}
+        {companyName?.toUpperCase()}{' '}
       </h3>
       <h6
         style={{
-          width: '50%',
+          width: '60%',
         }}
         className='text-center text-light bg-info font-size-11  px-2 py-1 rounded-3 mx-auto mb-2'
       >
         {' '}
-        Commerce Général & Immobilier
+        Commerçant des pièces détachées et accessoires
       </h6>
       <div className='text-info font-size-11 d-flex flex-column gap-0 justify-content-center align-item-center text-center mb-2'>
         <strong>{companyServices1}</strong>
@@ -61,13 +57,13 @@ export default function FactureHeader() {
         <strong className='font-size-12'>Info: {companyTel}</strong>
       </div>
       <div className='d-flex gap-3  justify-content-center align-item-center'>
+        <CardImg src={outil_1} style={{ width: '50px' }} />
+        <CardImg src={outil_2} style={{ width: '50px' }} />
+        <CardImg src={outil_3} style={{ width: '50px' }} />
+        <CardImg src={outil_4} style={{ width: '50px' }} />
         <CardImg src={outil_5} style={{ width: '50px' }} />
-        <CardImg src={outil_8} style={{ width: '50px' }} />
-        <CardImg src={outil_10} style={{ width: '50px' }} />
         <CardImg src={outil_6} style={{ width: '50px' }} />
-        <CardImg src={outil_11} style={{ width: '50px' }} />
-        <CardImg src={outil_12} style={{ width: '50px' }} />
-        <CardImg src={outil_13} style={{ width: '50px' }} />
+        <CardImg src={outil_1} style={{ width: '50px' }} />
       </div>
       <div
         style={{
@@ -77,9 +73,9 @@ export default function FactureHeader() {
         }}
         className='d-flex gap-1 flex-column justify-content-center align-item-center'
       >
-        <CardImg src={outil_4} style={{ width: '50px' }} />
+        {/* <CardImg src={outil_4} style={{ width: '50px' }} />
         <CardImg src={outil_7} style={{ width: '50px' }} />
-        <CardImg src={outil_9} style={{ width: '50px' }} />
+        <CardImg src={outil_9} style={{ width: '50px' }} /> */}
       </div>
     </CardHeader>
   );

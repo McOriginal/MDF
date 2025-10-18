@@ -13,9 +13,9 @@ import {
 } from '../../store/actions';
 import ProfileMenu from '../../components/Common/TopbarDropdown/ProfileMenu';
 import {
-  companyLittleName,
   companyLogo,
-  companyOwnerName,
+  companyName,
+  companyServices1,
 } from '../../Pages/CompanyInfo/CompanyInfo';
 
 const Header = (props) => {
@@ -62,7 +62,7 @@ const Header = (props) => {
         <div className='navbar-header'>
           <div className='d-flex'>
             <div
-              className='navbar-brand-box text-center pt-5 mb-4'
+              className='navbar-brand-box text-center'
               style={{ backgroundColor: ' #F7F4EA' }}
             >
               <span>
@@ -74,32 +74,26 @@ const Header = (props) => {
                   }}
                   alt='logo'
                 />
-                {window.screen.width >= 998 && (
-                  <h5 className='text-info'>{companyLittleName}</h5>
-                )}
               </span>
             </div>
 
             <button
               type='button'
-              className='btn btn-sm px-3 font-size-24 header-item waves-effect  d-flex justify-content-center bg-info text-white align-self-center mx-3 pt-3'
+              className='btn btn-sm px-3 font-size-24 header-item waves-effect text-info  align-self-center '
               id='vertical-menu-btn'
               onClick={() => {
                 tToggle();
               }}
             >
-              <i className='ri-menu-2-line align-middle'></i>
+              <i className='dripicon-alarm dripicons-menu align-middle '></i>
             </button>
+          </div>
 
-            <p
-              className='d-flex justify-content-center align-items-center fw-bold font-size-16'
-              style={{
-                color: ' #27548A',
-              }}
-            >
-              {companyLittleName} |
-              <span className=' ms-2 text-warning'> {companyOwnerName}</span>
+          <div className='d-none d-md-flex  justify-content-center align-items-center flex-column'>
+            <p className='text-info mb-0 fw-bold' style={{ fontSize: '18px' }}>
+              {companyName}
             </p>
+            <p className=' ms-2 text-warning'> {companyServices1}</p>
           </div>
 
           <div className='d-flex'>
